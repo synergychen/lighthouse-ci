@@ -7,7 +7,9 @@
 
 const fs = require('fs');
 const path = require('path');
-const LHCI_DIR = path.join(process.cwd(), '.lighthouseci');
+// const LHCI_DIR = path.join(process.cwd(), '.lighthouseci');
+console.log('Loading patched version: LHCI_DIR changed to /tmp/.lighthouseci');
+const LHCI_DIR = path.join('/tmp', '.lighthouseci');
 const LHR_REGEX = /^lhr-\d+\.json$/;
 const LH_HTML_REPORT_REGEX = /^lhr-\d+\.html$/;
 const ASSERTION_RESULTS_PATH = path.join(LHCI_DIR, 'assertion-results.json');
